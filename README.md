@@ -4,6 +4,8 @@ I have this Mozart config full of Morph modules and I want to know whether any o
 
 ## Install
 
+> **Heads up!** You'll need Node v7 or higher for this to work.
+
 ```
 git clone git@github.com:BBC-News/do-i-need-to-promote-anything.git
 cd do-i-need-to-promote-anything/
