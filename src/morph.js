@@ -18,11 +18,11 @@ module.exports.analyseVersions = (template) => {
     }
 
     if (vInt === vTest && vTest !== vLive) {
-      console.log(chalk.cyan(`💁  ${chalk.bold(template)} needs to be promoted to live (${chalk.bold(vTest)} -> ${chalk.bold(vLive)})`))
+      console.log(chalk.cyan(`💁  ${chalk.bold(template)} needs to be promoted to live (${chalk.bold(vLive)} -> ${chalk.bold(vTest)})`))
     }
 
     if (vInt !== vTest) {
-      console.log(chalk.yellow(`🙋  ${chalk.bold(template)} needs to be promoted to test (${chalk.bold(vInt)} -> ${chalk.bold(vTest)})`))
+      console.log(chalk.yellow(`🙋  ${chalk.bold(template)} needs to be promoted to test (${chalk.bold(vTest)} -> ${chalk.bold(vInt)})`))
     }
   })
 }
