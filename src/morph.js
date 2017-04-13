@@ -17,21 +17,25 @@ module.exports.analyseVersions = (template) => {
       console.log(chalk.green(`🎉  ${chalk.bold(template)} is up-to-date on all environments`))
     }
 
-    if (vInt !== vTest || vTest !== vLive) {
-      return console.log(chalk.yellow(`⚠️  ${chalk.bold(template)} needs to be promoted (int: ${vInt} / test: ${vTest} / live: ${vLive})`))
+    if (vInt === vTest && vTest !== vLive) {
+      console.log(chalk.cyan(`💁  ${chalk.bold(template)} needs to be promoted to live (${chalk.bold(vTest)} -> ${chalk.bold(vLive)})`))
+    }
+
+    if (vInt !== vTest) {
+      console.log(chalk.yellow(`🙋  ${chalk.bold(template)} needs to be promoted to test (${chalk.bold(vInt)} -> ${chalk.bold(vTest)})`))
     }
   })
 }
 
-function getIntVersion(template) {
+function getIntVersion (template) {
   return getVersion(`https://manager.morph.int.api.bbci.co.uk/module/${template}/environmentVersion`, template)
 }
 
-function getTestVersion(template) {
+function getTestVersion (template) {
   return getVersion(`https://manager.morph.test.api.bbci.co.uk/module/${template}/environmentVersion`, template)
 }
 
-function getLiveVersion(template) {
+function getLiveVersion (template) {
   return getVersion(`https://manager.morph.api.bbci.co.uk/module/${template}/environmentVersion`, template)
 }
 
