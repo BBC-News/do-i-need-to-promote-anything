@@ -1,6 +1,6 @@
 {
   "name": "do-i-need-to-promote-anything",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Do I need to promote anything in this Mozart config?",
   "main": "src/index.js",
   "scripts": {
