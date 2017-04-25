@@ -15,8 +15,18 @@ npm link
 
 ## Usage
 
+### Find out which components need to be promoted
+
 ```
 dintpa path/to/mozart/config.json
 ```
 
 ![](./screenshot.png)
+
+### Find out which components need to be bumped to include the latest version of a dependency
+
+```
+dintpa path/to/mozart/config.json --bump name-of-module
+```
+
+![](./screenshot-bump.png)
