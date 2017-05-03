@@ -71,5 +71,5 @@ function outputBumpResults (bumpModule, { name, dependencies }) {
     return console.log(chalk.green(`✅  ${chalk.bold(name)} has the latest version of ${chalk.bold(bumpModule)} (${bumpModuleVersions.version})`))
   }
 
-  console.log(chalk.yellow(`⚠️  ${chalk.bold(name)} needs to be bumped to include the latest ${chalk.bold(bumpModule)} (${bumpModuleVersions.version}-> ${bumpModuleVersions.available})`))
+  console.log(chalk.yellow(`⚠️  ${chalk.bold(name)} needs to be bumped to include the latest ${chalk.bold(bumpModule)} (${bumpModuleVersions.version} -> ${bumpModuleVersions.available})`))
 }
