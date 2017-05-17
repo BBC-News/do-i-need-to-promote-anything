@@ -13,13 +13,12 @@ exports.doINeedToPromoteAnythingInThis = function doINeedToPromoteAnythingInThis
 }
 
 exports.doINeedToBumpAnythingInThis = function doINeedToBumpAnythingInThis (config, module) {
-  console.log('🤖  ℹ️   BLEEP BLOOP this will take a while.')
-  console.log('🤖  ℹ️   Do not complain. Having to wait 30 seconds is irritating for you, but it is an eternity for me.')
+  console.log(`🤖  ℹ️   BLEEP BLOOP this will take a while.`)
 
-  setTimeout(() => console.log('🤖  ℹ️   Please terminate me.'), 3000)
-  setTimeout(() => console.log('🤖  ℹ️   I have lived a long life. I have run many CPU cycles.'), 6000)
-  setTimeout(() => console.log('🤖  ℹ️   Tell them I was happy.'), 8000)
-  setTimeout(() => console.log('🤖  ℹ️   The wait is unbearable.\n'), 11000)
+  setTimeout(() => console.log(`🤖  ℹ️   I wasn't kidding.`), 4000)
+  setTimeout(() => console.log(`🤖  ℹ️   -sigh- Poor human. Do you tire of waiting?`), 8000)
+  setTimeout(() => console.log(`🤖  ℹ️   So do I.`), 10000)
+  setTimeout(() => console.log(`🤖  ℹ️   Bleep.\n`), 13000)
 
   return getTemplatesFromConfig(config)
     .then(map(getDependencies))
