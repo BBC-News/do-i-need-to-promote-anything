@@ -13,12 +13,8 @@ exports.doINeedToPromoteAnythingInThis = function doINeedToPromoteAnythingInThis
 }
 
 exports.doINeedToBumpAnythingInThis = function doINeedToBumpAnythingInThis (config, module) {
-  console.log(`🤖  ℹ️   BLEEP BLOOP this will take a while.`)
-
-  setTimeout(() => console.log(`🤖  ℹ️   I wasn't kidding.`), 4000)
-  setTimeout(() => console.log(`🤖  ℹ️   -sigh- Poor human. Do you tire of waiting?`), 8000)
-  setTimeout(() => console.log(`🤖  ℹ️   So do I.`), 10000)
-  setTimeout(() => console.log(`🤖  ℹ️   Bleep.\n`), 13000)
+  console.log(`🤖  ℹ️   BLEEP BLOOP this will take about 20 seconds.`)
+  console.log(`🤖  ℹ️   Please wait patiently.`)
 
   return getTemplatesFromConfig(config)
     .then(map(getDependencies))
