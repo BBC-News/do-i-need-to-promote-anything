@@ -46,12 +46,12 @@ function outputVersions ({ name, versions }) {
     console.log(chalk.green(`✅  ${chalk.bold(name)} is up-to-date on all environments`))
   }
 
-  if (versions.int === versions.test && versions.test !== versions.live) {
-    console.log(chalk.cyan(`ℹ️  ${chalk.bold(name)} needs to be promoted to live (${chalk.bold(versions.live)} -> ${chalk.bold(versions.test)})`))
+  if (versions.test !== versions.live) {
+    console.log(chalk.cyan(`ℹ️  ${chalk.bold(name)} can be promoted to live (${chalk.bold(versions.live)} -> ${chalk.bold(versions.test)})`))
   }
 
   if (versions.int !== versions.test) {
-    console.log(chalk.yellow(`⚠️  ${chalk.bold(name)} needs to be promoted to test (${chalk.bold(versions.test)} -> ${chalk.bold(versions.int)})`))
+    console.log(chalk.yellow(`⚠️  ${chalk.bold(name)} can be promoted to test (${chalk.bold(versions.test)} -> ${chalk.bold(versions.int)})`))
   }
 }
 
